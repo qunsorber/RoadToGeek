@@ -66,6 +66,7 @@ void test(char *testname, ListNode *h1, ListNode *h2, int expected){
     else {
         printf("[%s failed!]\n", testname); 
     }
+    
 }
 
 void test1(){
@@ -87,6 +88,7 @@ void test1(){
     node6->next = node7;
     node7->next = node3;
     test("test1", head1, head2, 7);
+    ListNode *result = GetFirstCommonNode(head1, head2);
     delete head1;
     delete node1;
     delete node2;
@@ -108,4 +110,7 @@ void test2(){
 int main(){
     test1();
     test2();
+
+int main(){
+    test1();
 }
